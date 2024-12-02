@@ -1,0 +1,24 @@
+main{
+    grid-area: content;
+}
+
+.card{
+    width: 75vw;
+    max-width: 75vw;
+    overflow: hidden;
+    margin: 20px auto;
+    display: flex;
+    align-items: center;
+}
+
+.card img{
+    max-width: 300px;
+    width: auto;
+    height: auto;
+    border-radius: 10px;
+    margin-right: 20px;
+}
+
+.card-description p {
+    color: black
+}

@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+:root {
+	--primary-color: #37cc8f;
+	--secondary-color: #fe9901;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    grid-template-areas: "nav"
+                         "content";
+    grid-template-rows: 90px 1fr;
+	grid-template-columns: 100vw;
+	font-family: 'Lato', sans-serif;
+	color: var(--primary-color);
+}
+
+nav {
+	grid-area: nav;
+	font-size: 14px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	top: 0;
+	left: 0;
+	width: 100%;
+	background: #fff;
+	box-shadow: 0px 0px 15px 0px rgba(0,0,0,0.2);
+}
+
+#logo {
+	max-height: 100%;
+}
+
+#logo img {
+	max-height: 100%;
+	width: auto;
+	height: auto;
+}
+
+div[fill] {
+	height: 60px;
+	width: 50%;
+}
+
+nav > a, nav div[dropdown]{
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	height: 60px;
+	padding: 0em 1.5em;
+	transition: text_decoration 300ms ease;;
+	text-decoration: none;
+}
+
+nav a:hover, nav div[dropdown]:hover {
+	text-decoration: underline;
+}
+
+nav a:visited{
+	text-decoration: none;
+	color: var(--primary-color);
+}
+
+nav div[dropdown] {
+	position: relative;
+}
+
+nav div[dropdown]:hover .active {
+	display: block;
+}
+
+.active { 
+	display: none; 
+}
+
+.link-dropdown {
+	position: absolute;
+	top: 60px;
+	right: 0;
+	background: #fff;
+	box-shadow: 0 10px 15px 0 rgba(0,0,0,0.05);
+	z-index: 1;
+}
+
+.link-dropdown a {
+	cursor: pointer;
+	padding: 1em 2em;
+	white-space: nowrap;
+	display: block;
+}
+
+.link-dropdown a:hover {
+	color: #1c2541;
+}
+
+.hidden{
+	display: none;
+}
